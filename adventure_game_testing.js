@@ -23,10 +23,19 @@ describe('hero', function(){
     hero.eat(food);
     expect(hero.health).to.equal(food.repValue);
   });
-  
+
   it('should receive 1.5 times health points from fave food', function(){
     hero.health = 0;
     hero.eat(faveFood);
     expect(hero.health).to.equal(faveFood.repValue * 1.5);
   });
+
+})
+
+describe('rat', function(){
+  it('can poison food', function(){
+    rat.touch(food);
+    expect(food.poisoned).to.equal(true);
+    food.poisoned = false
+  })
 })
