@@ -30,6 +30,7 @@ describe('hero', function(){
     hero.eat(faveFood);
     expect(hero.health).to.equal(faveFood.repValue * 1.5);
   });
+
   it('should lose health points from eating poisoned food', function(){
     hero.health = 100;
     rat.touch(food);
@@ -37,6 +38,12 @@ describe('hero', function(){
     expect(hero.health).to.equal(100 - food.repValue);
     food.poisoned = false;
   });
+
+  it('should take damage on hit', function(){
+    hero.health = 100;
+    villain.hit(hero, 10);
+    expect(hero.health).to.equal(90);
+  })
 
 })
 

@@ -25,6 +25,7 @@ Hero.prototype = {
       this.health -= food.repValue;
     }
   }
+  
 }
 
 var hero1 = new Hero('Callum', 100, 'beer');
