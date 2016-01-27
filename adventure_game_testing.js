@@ -34,7 +34,7 @@ describe('hero', function(){
     hero.health = 100;
     rat.touch(food);
     hero.eat(food);
-    expect(hero.health).to.equal(100 - food.value);
+    expect(hero.health).to.equal(100 - food.repValue);
     food.poisoned = false;
   });
 
