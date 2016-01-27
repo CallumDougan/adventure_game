@@ -24,11 +24,15 @@ Hero.prototype = {
     else{
       this.health -= food.repValue;
     }
+  },
+  hit: function(victim, damage){
+    victim.health -= damage;
   }
   
 }
 
 var hero1 = new Hero('Callum', 100, 'beer');
+var villain = new Hero('Beth', 100, 'pizza');
 
 var Food = function(name, poisoned, repValue){
   this.name = name;
@@ -51,4 +55,4 @@ var rat1 = new Rat("ratty");
 var food1 = new Food('bread', false, 20);
 var food2 = new Food('beer', false, 40);
 
-module.exports = [hero1, food1, food2, rat1]
+module.exports = [hero1, food1, food2, rat1, villain]

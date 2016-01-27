@@ -6,6 +6,7 @@ var hero = require('./adventure_game')[0];
 var food = require('./adventure_game')[1];
 var faveFood = require('./adventure_game')[2];
 var rat = require('./adventure_game')[3];
+var villain = require('./adventure_game')[4];
 
 
 
@@ -43,6 +44,14 @@ describe('hero', function(){
     hero.health = 100;
     villain.hit(hero, 10);
     expect(hero.health).to.equal(90);
+  })
+  it('can avoid being poisoned by taking an antidote', function(){
+    hero.antidote = true;
+    hero.health = 100;
+    food.poisoned = true;
+    hero.eat(food);
+    expect(hero.health).to.equal(100);
+    food.poisoned = false;
   })
 
 })
