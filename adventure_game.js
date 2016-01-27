@@ -3,7 +3,7 @@ var Hero = function(name, health, faveFood){
   this.health = health;
   this.faveFood = faveFood;
 
-  stomach = []
+  this.stomach = [];
 }
 
 Hero.prototype = {
@@ -12,7 +12,7 @@ Hero.prototype = {
     return "I am a hero called " + this.name;
   },
   eat: function(food){
-
+    this.stomach.push(food);
   }
 }
 
