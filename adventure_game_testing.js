@@ -16,4 +16,10 @@ describe('hero', function(){
     hero.eat(food);
     expect(hero.stomach).to.include(food);
   });
+
+  it('can eat food to heal self by food.value', function(){
+    hero.health = 0;
+    hero.eat(food);
+    expect(hero.health).to.equal(food.repValue);
+  })
 })
