@@ -13,6 +13,7 @@ Hero.prototype = {
   },
   eat: function(food){
     this.stomach.push(food);
+    this.health += food.repValue;
   }
 }
 
