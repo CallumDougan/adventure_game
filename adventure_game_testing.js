@@ -46,11 +46,11 @@ describe('hero', function(){
     expect(hero.health).to.equal(90);
   })
   it('can avoid being poisoned by taking an antidote', function(){
-    hero.antidote = true;
+    hero.antidote = 1;
     hero.health = 100;
     food.poisoned = true;
     hero.eat(food);
-    expect(hero.health).to.equal(100);
+    expect(hero.health).to.equal(120);
     food.poisoned = false;
   })
 
