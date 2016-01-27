@@ -30,7 +30,19 @@ var Food = function(name, poisoned, repValue){
   this.repValue = repValue;
 }
 
-var food1 = new Food('bread', false, 20);
-var food2 = new Food('beer', false, 40)
+var Rat = function(name){
+  this.name = name;
+}
 
-module.exports = [hero1, food1, food2]
+Rat.prototype = {
+  touch: function(food){
+    food.poisoned = true;
+  }
+}
+
+var rat1 = new Rat("ratty");
+
+var food1 = new Food('bread', false, 20);
+var food2 = new Food('beer', false, 40);
+
+module.exports = [hero1, food1, food2, rat1]

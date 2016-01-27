@@ -5,6 +5,7 @@ var expect = chai.expect;
 var hero = require('./adventure_game')[0];
 var food = require('./adventure_game')[1];
 var faveFood = require('./adventure_game')[2];
+var rat = require('./adventure_game')[3];
 
 
 
