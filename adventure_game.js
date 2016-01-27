@@ -13,7 +13,12 @@ Hero.prototype = {
   },
   eat: function(food){
     this.stomach.push(food);
-    this.health += food.repValue;
+    if(food.name === this.faveFood){
+    this.health += (food.repValue * 1.5)
+  }
+    else {
+      this.health += food.repValue
+    }
   }
 }
 
@@ -26,5 +31,6 @@ var Food = function(name, poisoned, repValue){
 }
 
 var food1 = new Food('bread', false, 20);
+var food2 = new Food('beer', false, 40)
 
-module.exports = [hero1, food1]
+module.exports = [hero1, food1, food2]

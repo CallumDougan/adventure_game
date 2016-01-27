@@ -23,6 +23,7 @@ describe('hero', function(){
     hero.eat(food);
     expect(hero.health).to.equal(food.repValue);
   });
+  
   it('should receive 1.5 times health points from fave food', function(){
     hero.health = 0;
     hero.eat(faveFood);
