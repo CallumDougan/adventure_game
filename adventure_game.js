@@ -2,6 +2,8 @@ var Hero = function(name, health, faveFood){
   this.name = name;
   this.health = health;
   this.faveFood = faveFood;
+
+  stomach = []
 }
 
 Hero.prototype = {
@@ -9,7 +11,7 @@ Hero.prototype = {
   talk: function(){
 
   },
-  eat: function(){
+  eat: function(food){
 
   }
 }
@@ -22,4 +24,6 @@ var Food = function(name, poisoned, repValue){
   this.repValue = repValue;
 }
 
-module.exports = [hero1]
+var food1 = new Food('bread', false, 20);
+
+module.exports = [hero1, food1]
